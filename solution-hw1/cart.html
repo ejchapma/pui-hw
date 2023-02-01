@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Gallery</title>
+
+        <!-- link to style sheet -->
+        <link rel="stylesheet" type="text/css" href="style.css" />
+
+        <!-- font, open-sans -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    </head>
+  
+  <body>
+    <!-- logo header -->
+    <header>
+        <a href="index.html">
+            <img src="./logo/logo-01.svg" 
+            width="400" 
+            alt="logo showing Bun Bun in text and a black and white cartoon cinnamon roll"
+            class="noBorder"/>
+        </a>
+    </header>
+
+    <!-- navigation -->
+    <nav>
+        <h2>
+            <a href="index.html">PRODUCTS</a>
+        </h2>
+        <h2>
+            <a href="cart.html">CART</a>
+        </h2>
+    </nav>
+
+    
+    <main>
+        <h1>Shopping Cart</h1>
+
+        <!-- products -->
+        <div class="shoppingCart" id="lessBottomMargin">
+            <img src="./products/original-cinnamon-roll.jpg" 
+            width="125" 
+            alt="cinnamon roll on a plate, covered in icing and cinnamon, with a cinnamon stick to the left side."/>
+            <p class="smallLink">Remove</p>
+            <p>Original Cinnamon Roll<br>Glazing: Keep original<br>Pack Size: 1</p>
+        </div>
+        <div class="shoppingCart" id="finalPrice"><p>$2.49</p></div>
+        <div class="shoppingCart" id="lessBottomMargin">
+            <img src="./products/double-chocolate-cinnamon-roll.jpg" 
+            width="125" 
+            alt="close-up of a cinnamon roll in brown paper, covered with chocolate ganache and small chopped nut pieces."/>
+            <p class="smallLink">Remove</p>
+            <p>Double-Chocolate Cinnamon Roll<br>Glazing: Sugar milk<br>Pack Size: 6</p>
+        </div> 
+        <div class="shoppingCart" id="finalPrice"><p>$27.45</p></div>
+
+        <!-- divider -->
+        <section id="lessBottomMargin"><hr></section>
+
+        <!-- final price + checkout -->
+        <div class="shoppingCart" id="lessBottomMargin">
+            <p id="finalPrice">Total: $29.94</p>
+        </div>
+        <div class="shoppingCart">
+            <div class="button" id="checkoutButton">Checkout</div>
+        </div>
+    </main>
+  </body>
+</html>

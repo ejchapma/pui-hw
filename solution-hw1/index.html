@@ -1,15 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-  <meta charset="UTF-8">
-  <title>Page Title</title>
+    <head>
+        <meta charset="UTF-8">
+        <title>Gallery</title>
+
+        <!-- link to style sheet -->
+        <link rel="stylesheet" type="text/css" href="style.css" />
+
+        <!-- font, open-sans -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    </head>
   
   <body>
+    <!-- logo header -->
+    <header>
+        <a href="index.html">
+            <img src="./logo/logo-01.svg" 
+            width="400" 
+            alt="logo showing Bun Bun in text and a black and white cartoon cinnamon roll"
+            class="noBorder"/>
+        </a>
+    </header>
 
-    <h1>I am the solution to HW1!</h1>
+    <!-- navigation -->
+    <nav>
+        <h2>
+            <a href="index.html">PRODUCTS</a>
+        </h2>
+        <h2>
+            <a href="cart.html">CART</a>
+        </h2>
+    </nav>
 
-    <p>
-        And I can link to <a href="./otherpage.html">other pages.</a>
-    </p>
+    <!-- product gallery -->
+    <main>
+        <h1>Our hand-made cinnamon rolls</h1>
 
+        <a href="detail.html">
+            <div>
+                <img src="./products/original-cinnamon-roll.jpg" 
+                width="300" 
+                alt="cinnamon roll on a plate, covered in icing and cinnamon, with a cinnamon stick to the left side."/>
+                <p class="cinnamonTitle">Original cinnamon roll</p>
+                <p>$2.49</p>
+            </div>
+        </a>
+
+        <a href="detail.html">
+            <div>
+                <img src="./products/apple-cinnamon-roll.jpg" 
+                width="300" 
+                alt="cinnamon roll on a plate, covered in icing and pieces of cooked apple, with a fork to the right."/>
+                <p class="cinnamonTitle">Apple cinnamon roll</p>
+                <p>$3.49</p>
+            </div>
+        </a>
+
+        <a href="detail.html">
+            <div>
+                <img src="./products/raisin-cinnamon-roll.jpg" 
+                width="300" 
+                alt="overhead view of a cinnamon roll with embedded raisins."/>
+                <p class="cinnamonTitle">Raisin cinnamon roll</p>
+                <p>$2.99</p>
+            </div>
+        </a>
+
+        <a href="detail.html">
+            <div>
+                <img src="./products/walnut-cinnamon-roll.jpg" 
+                width="300" 
+                alt="overhead view of a cinnamon roll on a black plate, with some uncooked oats on top."/>
+                <p class="cinnamonTitle">Walnut cinnamon roll</p>
+                <p>$3.49</p>
+            </div>
+        </a>
+        
+        <a href="detail.html">
+            <div>
+                <img src="./products/double-chocolate-cinnamon-roll.jpg" 
+                width="300" 
+                alt="close-up of a cinnamon roll in brown paper, covered with chocolate ganache and small chopped nut pieces."/>
+                <p class="cinnamonTitle">Double-chocolate cinnamon roll</p>
+                <p>$3.99</p>
+            </div>
+        </a>
+
+        <a href="detail.html">
+            <div>
+                <img src="./products/strawberry-cinnamon-roll.jpg" 
+                width="300" 
+                alt="layers of cinnamon rolls on skewers with strawberries."/>
+                <p class="cinnamonTitle">Strawberry cinnamon roll</p>
+                <p>$3.99</p>
+            </div>
+        </a>
+
+    </main>
   </body>
 </html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Gallery</title>
+
+        <!-- link to style sheet -->
+        <link rel="stylesheet" type="text/css" href="style.css" />
+
+        <!-- font, open-sans -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    </head>
+  
+  <body>
+    <!-- logo header -->
+    <header>
+        <a href="index.html">
+            <img src="./logo/logo-01.svg" 
+            width="400" 
+            alt="logo showing Bun Bun in text and a black and white cartoon cinnamon roll"
+            class="noBorder"/>
+        </a>
+    </header>
+
+    <!-- navigation -->
+    <nav>
+        <h2>
+            <a href="index.html">PRODUCTS</a>
+        </h2>
+        <h2>
+            <a href="cart.html">CART</a>
+        </h2>
+    </nav>
+
+    
+    <main>
+        <h1>Original cinnamon roll</h1>
+
+        <!-- product image -->
+        <section>
+            <img src="./products/original-cinnamon-roll.jpg" 
+            width="600" 
+            alt="cinnamon roll on a plate, covered in icing and cinnamon, with a cinnamon stick to the left side."/>
+        </section>
+
+        <div>
+            <p>Customize our delicious,<br>hand-made cinnamon roll to <br>your liking!</p>
+        </div>
+
+        <!-- drop down menus -->
+        <div id="lessBottomMargin">
+            <p>Glazing:</p>
+            <select name="glazes" id="glazes">
+                <option>Keep original</option>
+                <option>Sugar milk</option>
+                <option>Vanilla milk</option>
+                <option>Double chocolate</option>
+            </select>
+        </div>
+        <div id="moreBottomMargin">
+            <p>Pack size:</p>
+            <select name="glazes" id="glazes">
+                <option>1</option>
+                <option>3</option>
+                <option>6</option>
+                <option>12</option>
+            </select>
+        </div>
+
+        <!-- price and add to cart -->
+        <div>
+            <span>$2.49</span>
+            <span class="button">Add to Cart</span>
+        </div>
+    </main>
+  </body>
+</html>
