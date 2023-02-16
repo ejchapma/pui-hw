@@ -26,13 +26,6 @@ function glazeChange(element) {
     let sizes = parseInt((document.querySelector('#sizes')).value);
     let finalPrice = (2.49 + glazePrice)*sizes;
     displayPrice("$" + finalPrice.toFixed(2));
-
-    console.log("finalPrice");
-    console.log(finalPrice);
-    console.log("glazePrice");
-    console.log(glazePrice);
-    console.log("size");
-    console.log(sizes);
 }
 //change display of final roll price 
 function displayPrice(rollPrice) {
