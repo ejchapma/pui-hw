@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Product Details</title>
+
+    <!-- link to style sheet -->
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+
+    <!-- link to scripts -->
+    <script defer src="./scripts/app.js"></script>
+
+    <!-- font, open-sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+  </head> 
+  
+  <body>
+    <nav>
+        <!-- logo header -->
+        <div class="column1">
+          <a href="index.html">
+            <img src="./logo/logo-01.svg" 
+            width="400" 
+            alt="logo showing Bun Bun in text and a black and white cartoon cinnamon roll"
+            class="noBorder"/>
+          </a>
+        </div>
+        <!-- navigation -->
+        <div class="wrapper">
+          <div class="interiorWrapper">
+            <div class="column2"><h2><a href="index.html">PRODUCTS</a></h2></div>
+            <div class="column2"><h2><a href="cart.html">CART</a></h2></div>
+          </div>
+  
+          <hr>
+  
+          <!-- page title -->
+          <div class="header"><h1>Original cinnamon roll</h1></div>
+        </div>
+    </nav>
+
+    <main>
+      <div class="mainCenter">
+
+        <!-- product image -->
+        <div>
+            <img src="./products/original-cinnamon-roll.jpg" 
+            width="600" 
+            alt="cinnamon roll on a plate, covered in icing and cinnamon, with a cinnamon stick to the left side."/>
+        </div>
+
+        <div class="wrapperSmall">
+          <div id="detailOptions">
+              <p>Customize our delicious, hand-made cinnamon roll to your liking!</p>
+          </div>
+
+          <!-- drop down menus -->
+          <div class="wrapper" id="detailOptions">
+              <p>Glazing:</p>
+              <select name="glazes" id="glazes" onchange="glazeChange(this)">
+              </select>
+          </div>
+          <div class="wrapper" id="detailOptions">
+              <p>Pack size:</p>
+              <select name="sizes" id="sizes" onchange="sizeChange(this)">
+              </select>
+          </div>
+
+          <!-- price and add to cart -->
+          <div id="noEdges">
+              <div id="noEdges">
+                <div id="finalPrice">$2.49</div>
+                <div class="button" id="noEdges"><a href="cart.html">Add to Cart</a></div>
+              </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </body>
+</html>
