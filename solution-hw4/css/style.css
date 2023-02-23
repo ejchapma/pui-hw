@@ -109,6 +109,13 @@ hr {
     margin-top: 0px;
     padding: 0px;
 }
+.end {
+    width: 100%;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    margin: 0px;
+}
 .mainCenter {
     justify-content: center;
     padding-top: 0px;
@@ -119,10 +126,22 @@ hr {
     padding: 8px 20px 8px 20px;
     text-align: center;
 }
+.buttonEnd {
+    border: black solid 3px;
+    padding: 8px 20px 8px 20px;
+    text-align: right;
+    justify-content: center;
+    width: 100%;
+    margin: 0px;
+}
 
 
 /* hover classes */
 .button:hover {
+    background-color: yellow;
+    font-weight: 600;
+}
+.buttonEnd:hover {
     background-color: yellow;
     font-weight: 600;
 }
@@ -140,8 +159,4 @@ a div:hover {
     margin: 25px;
     padding: 0px;
     width: auto;
-}
-#noEdges {
-    margin: 25px 0px 25px 0px;
-    justify-content: right;
 }

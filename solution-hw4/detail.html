@@ -5,17 +5,24 @@
     <title>Product Details</title>
 
     <!-- link to style sheet -->
-    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./css/style.css"/>
 
     <!-- link to scripts -->
+    <script defer src="./scripts/rollData.js"></script>
     <script defer src="./scripts/app.js"></script>
 
     <!-- font, open-sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+    
+    <!-- construction stuff -->
+    <script>
+    </script>
   </head> 
   
+  <!--------------------------------------------------------------------------------->
+
   <body>
     <nav>
         <!-- logo header -->
@@ -37,18 +44,19 @@
           <hr>
   
           <!-- page title -->
-          <div class="header"><h1>Original cinnamon roll</h1></div>
+          <div class="header"><h1 id="detailHeader"></h1></div>
         </div>
     </nav>
 
+    <!--------------------------------------------------------------------------------->
+
     <main>
+      
       <div class="mainCenter">
 
         <!-- product image -->
         <div>
-            <img src="./products/original-cinnamon-roll.jpg" 
-            width="600" 
-            alt="cinnamon roll on a plate, covered in icing and cinnamon, with a cinnamon stick to the left side."/>
+            <img width="600" id="rollPicture"/>
         </div>
 
         <div class="wrapperSmall">
@@ -69,11 +77,9 @@
           </div>
 
           <!-- price and add to cart -->
-          <div id="noEdges">
-              <div id="noEdges">
-                <div id="finalPrice">$2.49</div>
-                <div class="button" id="noEdges"><a href="cart.html">Add to Cart</a></div>
-              </div>
+          <div class="end">
+                <div id="finalPrice"></div>
+                <div class="buttonEnd" id="addToCart" onclick="cartAdd()">Add to Cart</div>
           </div>
         </div>
 

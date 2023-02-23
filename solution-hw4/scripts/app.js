@@ -1,9 +1,38 @@
 //variables
-let glazePrice = [0,0, 0.5, 1.5];
+let glazePrice = [0, 0, 0.5, 1.5];
 let sizePrice = [1,3,5,10];
-let basePrice = 2.49;
 let glazeUpdate = 0;
 let sizeUpdate = 1;
+let currGlaze = "Keep Original";
+let currSize = 1;
+
+//---------------------------------------------------------------------------------
+
+const rollType = window.location.search.split('=')[1]; //retrieves the name of the roll
+let basePrice = rolls[rollType]["basePrice"]; //retrieves new base price
+let rollImage = rolls[rollType]["imageFile"]; //retrieves image scr
+//changing contents of the page
+document.querySelector("#finalPrice").innerText = "$" + basePrice;
+document.querySelector("#detailHeader").innerText = rollType + " cinnamon roll";
+document.getElementById("rollPicture").src = rollImage;
+
+//cart stuff
+let cart = [];
+class Roll {
+    constructor(rollType, currGlaze, currSize, basePrice) {
+        this.type = rollType;
+        this.glaze = currGlaze;
+        this.size = currSize;
+        this.basePrice = basePrice;
+    }
+}
+function cartAdd(element) {
+    let cartRoll = new Roll(rollType, currGlaze, currSize, basePrice);
+    cart.push(cartRoll);
+    console.log(cart);
+}
+
+//---------------------------------------------------------------------------------
 
 //arrays
 let allGlazes = [
@@ -54,10 +83,11 @@ for (let i = 0; i < allSizes.length; i++) {
     const select = document.createElement("option");
     select.value = allSizes[i].priceAdaptation;
     select.innerHTML = allSizes[i].size;
+    // currSize = select.innerHTML;
     document.querySelector("#sizes").add(select);
 }
 
-//change the listed price
+//calculate the listed price
 function priceUpdate() {
     return (basePrice + glazeUpdate) * sizeUpdate;
 }
@@ -65,17 +95,23 @@ function priceUpdate() {
 //price updates by select id
 function glazeChange(element) {
     let element1 = document.querySelector("#glazes"); //searches through the array
-    console.log(element1.value);
     glazeUpdate = parseFloat(element1.value);
+    currGlaze = element1.options[element1.selectedIndex].text;
     const newPrice = priceUpdate();
     //updates the displayed price in the HTML
     document.querySelector("#finalPrice").innerText = "$" + newPrice.toFixed(2);
 }
 function sizeChange(element) {
     let element2 = document.querySelector("#sizes"); //searches through the array
-    console.log(element2.value);
     sizeUpdate = parseInt(element2.value);
+    currSize = element2.options[element2.selectedIndex].text;
     const newPrice = priceUpdate();
     //updates the displayed price in the HTML
     (document.querySelector("#finalPrice")).innerText = "$" + newPrice.toFixed(2);
 }
+
+
+
+//let arr = element2.value.split(",");
+// currSize = parseInt(arr[1]);
+// sizeUpdate = parseInt(arr[0]);
