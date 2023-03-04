@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Cart</title>
+
+        <!-- link to style sheet -->
+        <link rel="stylesheet" type="text/css" href="./css/style.css" />
+        <link rel="stylesheet" type="text/css" href="./css/styleCart.css" />
+
+        <!-- link to scripts -->
+        <script defer src="./scripts/rollData.js"></script>
+        <script defer src="./scripts/common.js"></script>
+        <script defer src="./scripts/appCart.js"></script>
+
+        <!-- font, open-sans -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+    </head>
+  
+  <body>
+    <nav>
+        <!-- logo header -->
+        <div class="column1">
+          <a href="index.html">
+            <img src="./logo/logo-01.svg" 
+            width="400" 
+            alt="logo showing Bun Bun in text and a black and white cartoon cinnamon roll"
+            class="noBorder"/>
+          </a>
+        </div>
+        <!-- navigation -->
+        <div class="wrapper">
+          <div class="interiorWrapper">
+            <div class="column2"><h2><a href="index.html">PRODUCTS</a></h2></div>
+            <div class="column2"><h2><a href="cart.html">CART</a></h2></div>
+          </div>
+  
+          <hr>
+  
+          <!-- page title -->
+          <div class="header"><h1>Shopping cart</h1></div>
+        </div>
+    </nav>
+    
+    <main>
+        <section>
+            <!-- spacer -->
+            <div class="column3">
+            </div>
+
+            <!-- products -->
+            <div class="wrapperCart">
+                <div id="cart-list">
+                    <template id="cart-template">
+                        <div class="wrapperCart2">
+                            <!-- roll here -->
+                            <div class="wrapperCart3 cartRoll">
+                                <div class="interiorWrapperCart">
+                                    <div class="cartCol1">
+                                        <img class="cartImg" width="125"/>
+                                    </div>
+                                    <div class="cartCol2">
+                                        <p class="rollChoice"></p>
+                                        <p class="glazingChoice"></p>
+                                        <p class="sizeChoice"></p>
+                                    </div>
+                                    <div class="cartCol3 listPrice"><p></p></div>
+                                </div>
+                                <div class="cartCol1 delete-Roll" id="smallLink"><p>Remove</p></div>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+
+                <!-- divider -->
+                <div class="wrapper"><hr></div>
+
+                <!-- final price + checkout -->
+                <div class="wrapperCart2">
+                    <div class="interiorWrapperCart">
+                        <!-- filler -->
+                        <div class="cartCol1"></div>
+                        <!-- real content -->
+                        <div class="cartCol2"><p id="finalPrice">Total</p></div>
+                        <div class="cartCol3"><p id="finalPrice">$29.94</p></div>
+                    </div>
+                    <div class="finalCheckout">
+                        <div class="button" id="checkoutButton">Checkout</div>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </section>
+    </main>
+  </body>
+</html>
