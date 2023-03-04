@@ -59,6 +59,10 @@ function updateElement(cartRoll) {
     const rollGlazeElement = cartRoll.element.querySelector('.glazingChoice');
     const rollSizeElement = cartRoll.element.querySelector('.sizeChoice');
     const rollPriceElement = cartRoll.element.querySelector('.listPrice');
+    const rollRemove = cartRoll.element.querySelector('.delete-Roll');
+    rollRemove.addEventListener("click", () => {
+        deleteRoll(cartRoll);
+    })
 
 console.log(cartRoll)
 
