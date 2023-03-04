@@ -3,6 +3,7 @@ cartSet.add(new Roll ("Original", "Sugar milk", 1, 2.49));
 cartSet.add(new Roll ("Walnut", "Vanilla milk", 12, 3.49));
 cartSet.add(new Roll ("Raisin", "Sugar milk", 3, 2.99));
 cartSet.add(new Roll ("Apple", "Keep original", 3, 3.49));
+updatePrice();
 
 function createElement(cartRoll) {
     // make a clone of the cart template
@@ -79,4 +80,14 @@ console.log(cartRoll)
     cartRoll.element.remove();
     // remove the actual Notecard object from our set of notecards
     cartSet.delete(cartRoll);
+    updatePrice();
   }
+
+function updatePrice() {
+    const finalPrice = document.querySelector('#finalPrice');
+    let sum = 0;
+    for (let item of cartSet) { 
+        sum += price(item);
+    }
+    finalPrice.innerText = "$" + sum.toFixed(2);
+}
