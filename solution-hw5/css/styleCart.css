@@ -57,6 +57,9 @@
     margin: 25px 25px 0px 0px;
     padding: 0px;
 }
+.finalPrice {
+    font-size: 28px;
+}
 
 
 /* id tags */
@@ -70,9 +73,6 @@
     margin-bottom: 20px;
     margin-left: 25px;
     padding: 0px;
-}
-#finalPrice {
-    font-size: 28px;
 }
 #cart-list {
     display: block;
