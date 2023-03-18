@@ -1,0 +1,144 @@
+/* overall styling */
+html {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 22px;
+    text-align: center;
+}
+
+
+/* spacing and alignment */
+nav {
+    display: flex;
+    width: 100%;
+    padding-bottom: 30px;
+}
+section {
+    display: flex;
+    width: 100%;
+}
+div {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    padding: 10px;
+    margin: 25px;
+
+}
+img {
+    border: solid black 3px;
+    margin-bottom: 10px;
+}
+select {
+    width: 310px;
+    height: 50px;
+    font-size: 20px;
+    border: solid black 3px;
+    margin-top: 5px;
+}
+span {
+    text-align: right;
+    padding: 0px 30px 0px 30px;
+}
+
+
+/* element-specific styling */
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: 200;
+}
+h1 { 
+    font-size: 36px;
+    margin-top: 50px;
+    font-weight: 200;
+}
+h2 { 
+    font-size: 24px;
+    font-weight: 200;
+}
+p{
+    margin: 2px;
+}
+hr {
+    border: black solid 2.5px;
+    text-align: center;
+}
+
+
+/* class-specific styling */
+.noBorder {
+    border: solid 0px;
+}
+.column1 {
+    margin: 0px;
+    padding: 25px;
+}
+.column2 {
+    margin: 0px 50px 0px 50px;
+    padding: 0px;
+}
+.column3 {
+    margin: 10px;
+    padding: 25px;
+    width: 25%;
+}
+.header{
+    margin: 0px;
+    padding: 0px;
+}
+.wrapper {
+    display: inline-block;
+    justify-content: center;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+.wrapperSmall {
+    display: inline-block;
+    width: 25%;
+    margin: 25px 0px 25px;
+    padding: 0px;
+}
+.interiorWrapper{
+    justify-content: right;
+    margin-left: 0px;
+    margin-top: 0px;
+    padding: 0px;
+}
+.mainCenter {
+    justify-content: center;
+    padding-top: 0px;
+    margin-top: 0px;
+}
+.button {
+    border: black solid 3px;
+    padding: 8px 20px 8px 20px;
+    text-align: center;
+}
+.buttonEnd {
+    border: black solid 3px;
+    padding: 8px 20px 8px 20px;
+    text-align: right;
+    justify-content: center;
+    width: 100%;
+    margin: 0px;
+}
+
+
+/* hover classes */
+.button:hover {
+    background-color: yellow;
+    font-weight: 600;
+}
+.buttonEnd:hover {
+    background-color: yellow;
+    font-weight: 600;
+}
+h2 a:hover {
+    background-color: yellow;
+    font-weight: 600;
+}
+a div:hover {
+    background-color: yellow;
+}

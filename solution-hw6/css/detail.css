@@ -1,0 +1,13 @@
+/* classes */
+.detailOptions {
+    margin: 25px;
+    padding: 0px;
+    width: auto;
+}
+.end {
+    width: 100%;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    margin: 0px;
+}
