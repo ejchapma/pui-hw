@@ -1,0 +1,53 @@
+/* overall styling */
+html {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+    font-family: "ivypresto-text", serif;
+    font-size: 22px;
+    font-style: normal;
+    text-align: left;
+    font-weight: 300;
+    color: #58575F;
+    background-color: #FDF7E7;
+}
+
+
+/* organization styling */
+body {
+    width: 100%;
+}
+div {
+   /* background-color: rgba(200,0,0, 0.5); */
+   margin: 0.5rem;
+   padding: 0.5rem;
+}
+footer {
+    display: flex;
+}
+
+
+/* text styling */
+h3 {
+    font-size: 26px;
+    font-weight: 300;
+}
+
+
+/* class styling */
+.timerBox {
+    display: block;
+}
+.timerButtonBox {
+    display: flex;
+    flex-direction: row;
+}
+.counterBox {
+    display: flex;
+    flex-direction: row;
+}
+.timeButton {
+    border: 2px solid #58575F;
+    border-radius: 40px;
+}
