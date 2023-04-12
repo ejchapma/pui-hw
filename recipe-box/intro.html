@@ -1,48 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <style>
-            body {
-                margin: 0;
-                overflow: hidden;
-            }
-            html, body, main {
-                height: 100%;
-            }
-            canvas {
-                display: block;
-            }
-        </style>
 
-        <title>Recipe Box</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
 
-        <!-- link to style sheet -->
-        <link rel="stylesheet" type="text/css" href="./css/style.css" />
-        <link rel="stylesheet" type="text/css" href="./css/intro.css" />
+        html,
+        body,
+        main {
+            height: 100%;
+        }
 
-        <!-- font, open-sans -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;800&display=swap" rel="stylesheet">
-    </head>
+        canvas {
+            display: block;
+        }
+    </style>
 
-    <body>
-        <main>
-            <a href="index.html">
-                <div class="enterButton">
-                    <p>open the box</p>
-                </div>
-            </a>
+    <title>Recipe Box</title>
 
-            <canvas id="canvas3d"></canvas>
-            <script type="module" class="modeledBox">
-                import { Application } from './spline/runtime.js';
-                const canvas = document.getElementById('canvas3d');
-                const app = new Application(canvas);
-                app.load('./spline/scene.splinecode');
-            </script>
-        </main>
-    </body>
+    <!-- link to style sheet -->
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./css/intro.css" />
+
+    <!-- font, open-sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <main>
+
+        <div class="modeledBox">
+            <canvas id="canvas3d" class="modeledBox"></canvas>
+            <div class="enterButton">
+                <p><a href='index.html'>open the box</a></p>
+            </div>
+        </div>
+        
+
+        
+
+
+        <script type="module">
+            import { Application } from './spline/runtime.js';
+            const canvas = document.getElementById('canvas3d');
+            const app = new Application(canvas);
+            app.load('./spline/scene.splinecode');
+        </script>
+
+    </main>
+</body>
+
 </html>

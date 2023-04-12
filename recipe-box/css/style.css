@@ -19,12 +19,12 @@ body {
     width: 100%;
 }
 div {
-   /* background-color: rgba(200,0,0, 0.5); */
-   margin: 0.5rem;
-   padding: 0.5rem;
+   background-color: rgba(200,0,0, 0.5);
 }
 footer {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 
@@ -39,15 +39,22 @@ h3 {
 .timerBox {
     display: block;
 }
+.timerTitle {
+    display: flex;
+    align-items: center;
+}
 .timerButtonBox {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 .counterBox {
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
 }
 .timeButton {
     border: 2px solid #58575F;
-    border-radius: 40px;
+    border-radius: 30px;
+    padding:0.2rem 0.8rem 0.2rem 0.8rem;
+    margin: 0 0.2rem 0 0.4rem;
 }
