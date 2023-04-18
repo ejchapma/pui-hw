@@ -8,14 +8,16 @@ a {
     position: absolute;
     font-family: "ivypresto-text", serif;
     font-size: 80px;
+    line-height: 0px;
     text-align: center;
     align-content: center;
     z-index: 2;
     border: 4px solid #58575F;
-    border-radius: 40px;
-    background-color: transparent;
+    border-radius: 100px;
+    background-color: rgba(253, 247, 231, 0.7);
+    padding: 0rem 2.5rem 0.25rem 2.5rem;
 }
 .modeledBox {
     position: relative;
-    z-index: -1;
+    z-index: 1;
 }
