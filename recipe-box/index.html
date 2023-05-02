@@ -6,10 +6,12 @@
 
         <!-- link to style sheet -->
         <link rel="stylesheet" type="text/css" href="./css/style.css" />
+        <link rel="stylesheet" type="text/css" href="./css/cards.css" />
 
         <!-- link to scripts sheet -->
         <script defer src="./scripts/timer.js"></script>
         <script defer src="./scripts/clock.js"></script>
+        <script defer src="./scripts/sidebar.js"></script>
 
         <!-- font, ivypresto -->
         <link rel="stylesheet" href="https://use.typekit.net/lik7fyz.css">
@@ -19,7 +21,7 @@
         <header>
             <div class="timerBox">
                 <div class="timerTitle">
-                    <h3>timer :</h3>
+                    <h3>timer:</h3>
                     <div class="counterBox">
                         <h3 class="timerValues" id="hours">00</h3>
                         <h3>:</h3>
@@ -30,21 +32,151 @@
                 </div>
                 <div class="timerButtonBox">
                     <p>add time :</p>
-                    <div class="timeButton" id="oneMin">1 min</div>
-                    <div class="timeButton" id="fiveMin">5 min</div>
-                    <div class="timeButton" id="tenMin">10 min</div>
+                    <div class="timeButton" id="oneMin" onclick="startTimer(1)">1 min</div>
+                    <div class="timeButton" id="fiveMin" onclick="startTimer(5)">5 min</div>
+                    <div class="timeButton" id="tenMin" onclick="startTimer(10)">10 min</div>
                 </div>
             </div>
         </header>
 
-        <main>
-            
+        <main class="cardPage">
+            <div class="row">
+                <div class="stack" onclick="displayChangeSide('lime')">
+                    <div class="card lime"></div>
+                    <div class="card lime"></div>
+                    <div class="card lime">
+                        <p class="darkText">lunch</p>
+                    </div>
+                </div>
+                <div class="stack" onclick="displayChangeSide('blue')">
+                    <div class="card blue"></div>
+                    <div class="card blue"></div>
+                    <div class="card blue">
+                        <p>dinner</p>
+                    </div>
+                </div>
+                <div class="stack" onclick="displayChangeSide('lPink')">
+                    <div class="card lPink"></div>
+                    <div class="card lPink"></div>
+                    <div class="card lPink">
+                        <p class="darkText">breakfast</p>
+                    </div>
+                </div>
+                <div class="stack" onclick="displayChangeSide('dPink')">
+                    <div class="card dPink"></div>
+                    <div class="card dPink"></div>
+                    <div class="card dPink">
+                        <p>dessert</p>
+                    </div>
+                </div>
+                <div class="stack" onclick="displayChangeSide('dGreen')">
+                    <div class="card dGreen"></div>
+                    <div class="card dGreen"></div>
+                    <div class="card dGreen">
+                        <p>appetizers</p>
+                    </div>
+                </div>
+                <div class="stack" onclick="displayChangeSide('orange')">
+                    <div class="card orange"></div>
+                    <div class="card orange"></div>
+                    <div class="card orange">
+                        <p>soup</p>
+                    </div>
+                </div>
+                <div class="stack" onclick="displayChangeSide('lGreen')"> 
+                    <div class="card lGreen"></div>
+                    <div class="card lGreen"></div>
+                    <div class="card lGreen">
+                        <p>salad</p>
+                    </div>
+                </div>
+            </div>
         </main>
 
-        <footer>
-            <div><h3>a box full of love</h3></div>
-            <div><h3 id="clock"></h3></div>
-            <div><h3 class="footerLEFT">by e.rc</h3></div>
+        <section>
+            <div class="sidebar dGreen">
+                <div class="sideHead">
+                    <div class="sideTitle dGreen"><h1>appetizers</h1></div>
+                    <div class="sideTitle dGreen closeButton" onclick="closeSide()"><h3>X</h3></div>
+                </div>
+                <div class="option dGreen center" onclick="recipeCard('cornbread.png', 'mom', 'Cornbread GOLDEN YELLOW CORN BREAD OR CORN MUFFINS 1 cup Indian Head Yellow Corn Meal 1 teaspoon salt 1 cup all purpose flour 1 cup milk 1 egg, beaten teaspoons baking powder 1/4 cup oil 1/4 cup sugar 3 Preheat oven: 425 degrees In a bowl, combine corn meal, flour, sugar, baking powder and salt. In a separate bowl, combine milk, egg, and oil. Combine the wet and dry ingredients and stir until just blended. Corn Bread: Pour batter into 8x8 greased pan. Bake 20-25 minutes or until golden brown. Corn Muffins: Pour batter in greased or lined muffin tins, filling about 2/3 full. Bake for 15-20 minutes or until golden brown. Makes 12 muffins.')"><p>cornbread</p></div>
+                <div class="option dGreen right" onclick="recipeCard('deviled-eggs.png', 'mrs.anderson', 'Deviled Eggs 6 hard-boiled eggs 3 T. Mayo. 1/2 tsp. dry mustard. 1/8 tsp. salt 1/4 tsp. pepper Paprika 1. Cut eggs in half. Take out yolks &amp; mash with Park. 2. Mix with seasonings 3. Fill eggs, eggs, sprinkle with paprika, then chill')"><p>deviled eggs</p></div>
+                <div class="option dGreen" onclick="recipeCard('honey-dip.png', 'mrs.anderson', 'Fruit Kaboos with Hancy Dip 4 oz. cream cheese 1/2 container vanilla yogurt 17. honey Y1⁄2 tsp. gingen 1/2 can crushed preapple, drained Beat Ingredients. Propane kabobs by alternating thits grapes, strawberries, bannanas on skewers')"><p>honey dip</p></div>
+                <div class="option dGreen center" onclick="recipeCard('cheese-ball.png', 'mrs.anderson', 'Cheese Ball 1. plag. cream cheese 6. T. crumbled bleu cheese 1/2 c. shredded sharp cheddar 1/2 small onion, chopped 1/1⁄2 tsp. Warcestershine sauce Beat ingredients together until Aully. Shope into ball. Roll in parsley, cover and nofridgerate onright')"><p>cheese ball</p></div>
+                <div class="option dGreen right" onclick="recipeCard('cracker-snack-mix.png', 'mrs.anderson', '11 Soup &amp; Oyster Snack Mix 02. Sap &amp; Oyster Crackers 6 7. vegetable oil 1/4 tsp. lemon pepper 1/4 tsp. garlic pauder 1/8 top. dill weed 1/2 small package dry Ranch Style dressing Mix all ingredients, spread out in a Por 15 to 20 min, stirring occasionally pon. Bake at 250°')"><p>cracker snack mix</p></div>
+            </div>
+            <div class="sidebar orange">
+                <div class="sideHead">
+                    <div class="sideTitle orange"><h1>soup</h1></div>
+                    <div class="sideTitle orange closeButton" onclick="closeSide()"><h3>X</h3></div>
+                </div>
+                <div class="option orange center" onclick="recipeCard('tomato-bisque.png', 'mom', 'Tomato Bisque 1t. olive oil 1 c. diced anion 1. Cook onion with olive oil until translucent (5-8min). Stir in garlic and cook until fragrant 1 container chicken broth 2. Pour chicken broth and tomatos in. 3 cloves garlic 1 can crushed tomatos 1/2 tsp. paprika 1/2 c. heavy whipping cream salt. + pepper to taste 3T. incoded rice Bring to a simmer w/ seasonings. Tun to low &amp; add rice. Simmer for 30-45 min until rice is tender 3. Blend in immersion blender. Which in whopping Cream')"><p>tomato bisque</p></div>
+                <div class="option orange right" onclick="recipeCard('french-onion-soup.png', 'mrs.anderson', 'French Onion Soup 1 large arian 2 I mangawhe 1/1⁄2 tsp. flar 1c. water + 1/2 tsp. Warcestershire sauce 1. Cook anions in margarine over med. heat, until onions are tender &amp; just begining to brown. Spinkle with flair 2. Stir in 1/2 can of broth 4 slices french bread, toasted 3. Heat to boiling while stiming. 1 c. shredded mozzarella 4. Stir in brath, water, and sauce 5. Simmer for 5 min. 6. Broil samp with toast and cheese until melted and brown')"><p>french onion</p></div>
+            </div>
+            <div class="sidebar lGreen">
+                <div class="sideHead">
+                    <div class="sideTitle lGreen"><h1>salad</h1></div>
+                    <div class="sideTitle lGreen closeButton" onclick="closeSide()"><h3>X</h3></div>
+                </div>
+                <div class="option lGreen center" onclick="recipeCard('tuna-farrow-salad.png', 'mom', 'Tona and Farro Salad 1/2 cup uncooked farro 2 x 5oz cans tona, drained 5 sundried tomatos, chopped 2/2 oz green olives, pitted &amp; halved I small red onion, diced I red bell pepper, diced I small zucchini, cut in bite-sizedeces 3/2 oz mixed salad greens oil 1/4 cup chopped basi 1/2 tsp Italian seasoning Dressing: 2 Tbsp balsamic I clove garlic salt &amp; pepper')"><p>tuna farrow</p></div>
+                <div class="option lGreen right" onclick="recipeCard('virginia-waldorf-salad.png', 'mom', 'Virginia Waldorf Salad cored &amp; cut into 3 Anjou pears, 1/2 pieces. I c diced 1/2 celery I c red grapes, halved 1/4 lb smoked turkey, 11⁄2 pieces 1/2 c dried cherries unsalted 1/2 c roasted peanuts. 3/4 c plain yogurt 1/4 c mayonnaise 1 Tbsp smooth peanut butter Y/A C chopped parsley 1. Combine pears, celery, grapes, turkey, dried cherries and peanuts in a large bowl. Toss thoroughly. 2. Whisk together yogart, mayo, peanut butter &amp; all but 2 tsp of parsley. Fold dressing into saldd; season w/salt &amp; pepper. Garnish w/remaining parsley.')"><p>virginia waldorf</p></div>
+            </div>
+            <div class="sidebar lime">
+                <div class="sideHead">
+                    <div class="sideTitle lime"><h1 class="darkText">lunch</h1></div>
+                    <div class="sideTitle lime closeButton" onclick="closeSide()"><h3 class="darkText">X</h3></div>
+                </div>
+                <div class="option lime center" onclick="recipeCard('sunset-grilled-chicken.png', 'mom', 'Sunset Grilled Chicken Cutlets 4 boned chicken breasts, out in half 3 garlic cloves, minced 1 Tbsp minced fresh thyme 2 Tbsp minced parsley 1 tsp ground coriander whole grain 1 Tbsp mustard 2 Tbsp lemon juice 6 Tbsp olive oil Use half as marinade, half as sauce')"><p class="darkText">sunset grilled chicken</p></div>
+                <div class="option lime right" onclick="recipeCard('garlic-herb-pasta.png', 'mom', 'Garlic &amp; Herb Angel Hair -6 cloves garlic -8 sprigs parsley -37. dive oil -2 tsp. salt -3/4 16. ongel hair pasta -1/2 tsp. grated lemon zest -Grated chcese for serving 1. Mince garlic, parsley, &amp; lemon zest 2. Cook garlic in a sauté sauté par with раз the oil over med. low heat 3. Boil water over high heat w/ salt 4. Cook pasta 5. Add parsley and lemon zest to galio/oil pan 6. Toss pasta in sauté par and serve')"><p class="darkText">garlic herb pasta</p></div>
+                <div class="option lime" onclick="recipeCard('mushroom-risotto.png', 'mom', 'MUSHROOM RISOTTO 2 tablespoons olive oil 1 1/2 2 tablespoons butter or margarine 1 1/2 cups sliced mushrooms cups RiceSelect Risotto rice 1 onion, chopped 41/2 1 red or green bell pepper, chopped 1 cups vegetable or chicken broth tablespoon chopped Italian parsley Heat olive oil and butter or margarine in large saucepan. Saute onion until transparent. Add bell pepper and mushrooms; cook for 2 minutes. Add the rice and stir for 1-2 minutes. Add 1 1/2 cups broth and bring to a boil. Reduce heat to medium, stirring constantly until liquid is absorbed. Add remaining broth 1 cup at a time, cooking and stirring until liquid is absorbed each time. Remove from heat and stir in parsley.')"><p class="darkText">mushroom risotto</p></div>
+                <div class="option lime center" onclick="recipeCard('asian-salmon.png', 'mom', 'Asian Salman Marinate 2 lbs. salmon, b/w 2 hrs &amp; overnight, in: -2 tsp. sesame seeds -1 tsp. minced garlic -1 tsp. minced onion -3/4 tsp. grand ginger -1/2 tsp. red pepper - 1/3 C. honey -1/3 c. green -2T. soy sauce onions')"><p class="darkText">asian salmon</p></div>
+            </div>
+            <div class="sidebar blue">
+                <div class="sideHead">
+                    <div class="sideTitle blue"><h1>dinner</h1></div>
+                    <div class="sideTitle blue closeButton" onclick="closeSide()"><h3>X</h3></div>
+                </div>
+                <div class="option blue center" onclick="recipeCard('hawaiian-chicken.png', 'mom', 'Marinate Hawaian Chicken I chicken, cut in pieces in: 1/3 cup lemon juice 1/3 cup soy sauce 1/3 cup vegetable oil 1 tsp garlic. 1/2 tsp ground black pepper tsp ground thyme')"><p>hawaiian chicken</p></div>
+                <div class="option blue right" onclick="recipeCard('goulash.png', 'mom', 'Goulash 3Toil 4c sliced onions 2 c beef broth 1 tsp salt 1/2 lbs Stew beef, cubed 2 Tbsp paprika Saute onions in 2 Tbsp oil until soft. Set aside Brown beef in 1 Tbsp oil. Add onions and broth. Simmer for 1hr, or until beef is tender. Add paprika + Simmer 20 min. Thicken with floor and water. Serve over polenta or noodles egg wide')"><p>goulash</p></div>
+                <div class="option blue" onclick="recipeCard('apricot-glazed-pork.png', 'mom', 'Aprizot-Glazed Parks Medallions -1/2 16. park tenderloin -Salt -Grand black pepper -2 tsp. sesame oil -1/3 c. apnect preserves -2T. tamani sauce -1/2 tsp. pickled ginger 1. Cut the tenderloin into 1/2 in. thick rands 2. Season both sides of park w/ salt &amp; pepper 3. Heat oil in a large skillet over med high heat, add park, sear 2 mm. /side 4. Chop ginger 5. Adel aprizot preserves, tamari sauce, ginger to stallet. Bring to and a smmer. 6. Simmer for 5 min, or until the parts is cooked and the sauce reduces')"><p>apricot glazed pork</p></div>
+                <div class="option blue center" onclick="recipeCard('bulgogi.png', 'mom', 'Bulgogi Marinade -1/2 c. soy sauce -1/3 c. sugar -3 T. sake -2 T. sesame oil -4 scallions, chopped -2 T. sesame seeds')"><p>bulgogi</p></div>
+                <div class="option blue right" onclick="recipeCard('butter-sauteed-chicken.png', 'mom', 'Chicken Breasts Sauteed in Butter -1 chicken breast half -1/8 tsp. salt - 1/8 tsp. pepper -1/4 c. flav - 1 beaten egg -1/4 c. bread crumbs -1T. butter -3 T. butter -1/4 lemon -1 T. parsley')"><p>butter sauteed chicken</p></div>
+            </div>
+            <div class="sidebar lPink">
+                <div class="sideHead">
+                    <div class="sideTitle lPink"><h1 class="darkText">breakfast</h1></div>
+                    <div class="sideTitle lPink closeButton" onclick="closeSide()"><h3 class="darkText">X</h3></div>
+                </div>
+                <div class="option lPink center" onclick="recipeCard('oatmeal-coconut-crisps.png', 'grandma deagle', 'Grandma Deagles Oatmeal Coconut Crisps I cup butter or margarine 3/4 cup coconot I cup brown sugar Legg baking soda 1/4 cup cats 1/2 tsp vanilla 1/2 tsp extract Bake 375° almond 1/4 cups flour 1/2 tsp each &amp; Salt Blend together butter and brown sugar. Add egg and mix thoroghly. Blend in flour, baking soda + salt. Mix in remaining ingredients Roll into balls and press w/ fork on')"><p>oatmeal coconut crisps</p></div>
+                <div class="option lPink right" onclick="recipeCard('buttermilk-pancakes.png', 'mom', 'Buttermilk Pancales 1 c. flour 2 T. cornmeal 1 T, sugar 1 tsp. baking pander 1/2 tsp. baking soda 1/4 tsp. cintaman 1 1. C. Car 1. T. egg buttermilk vinegar + 1c. milk 1. Cambine dry ingredients, make a well in the center 2 In another bowl, combine wet ingredients 3. Add wet to dry, stir until just morstened / lumpy 4. Cook over med / med lav heat')"><p>buttermilk pancakes</p></div>
+                <div class="option lPink" onclick="recipeCard('banana-bars.png', 'mom', 'Banana Breakfast Bars -2 med. bananas, mashed -1/4 c. vegetable oil -1/4 c. brown sugar -1 egg -1 tsp. vanilla extract -1/2 tsp. salt -1/2 tsp. baking soda -Y2 c. whole wheat flour -1 c. oats Tapping: -1/4 c. white chocolate chips -1 T. peanut butter 1. Preheat oven to 350°. Spray 8 x 8 pan w/ cooling spray 2. Combine bananas, brown sugar, &amp; oil. Add Th egg, vanilla, &amp; salt. Mix 3. Stir in baking soda. Add flour and oats. Stir witil mixed, Bake.')"><p>banana bars</p></div>
+            </div>
+            <div class="sidebar dPink">
+                <div class="sideHead">
+                    <div class="sideTitle dPink"><h1>dessert</h1></div>
+                    <div class="sideTitle dPink closeButton" onclick="closeSide()"><h3>X</h3></div>
+                </div>
+                <div class="option dPink center" onclick="recipeCard('marshmallow-buttercream.png', 'mom', 'Marshmallow Buttercream I cup unsalted butter, softened 1 7/2 oz jar of marshmallow cream 1/4 cups confectioners sugar 1/2 tsp vanilla or almond extract Cream butter in a mixing bowl with an electric mixer on medium until butter is soft and fluffy. Gradually beat in confectioners sugar, 1/2 a cup at a time; beat in extract. Gently fold marshmallow cream into the frosting until thoroughly incorporated.')"><p>marshmallow buttercream</p></div>
+                <div class="option dPink right" onclick="recipeCard('marzipan.png', 'mom', 'Marzipan 1/2 c finely ground almonds 1/2 c powdered sugar 2 tsp almond extract 1 egg white 1. Combine almond flour and sugar in bowl of stand mixer. Blend together. 2. Ado extract and egg white. Blend until the dough comes together to form a paste.')"><p>marzipan</p></div>
+                <div class="option dPink" onclick="recipeCard('indiana-creamy-peach-pie.png', 'mom', 'Indiana Creamy Peach Pie Crust: 1/2 cups all-purpose flour 1/2 tsp salt Filling: 4 cups sliced fresh peaches 2/1⁄2 Tbsp all-purpose flour 1/4 tsp salt I cup sour cream Topping: 1/3 cup sugar 1..1/3 cup all-purpose flour 1/2 cup butter I cup sugar 1 egg 1 tsp vanilla extract 1/4 cup butter Preheat oven to 400°F. For crust, combine flour and salt and cut in butter. Press into a 9-inch pie plate.')"><p>indiana creamy peach pie</p></div>
+                <div class="option dPink center" onclick="recipeCard('butter-tarts.png', 'grandma alice', 'Grandma Alices Butter Tarts / Raspberry Coconut Tarts 1. Prepare fart shells w/pastry crust. 2. Place 1 tsp raspberry jam in tart shell. 3. Blend together: 1/4 cup soft butter, 3/4 cups brown sugar. Add legg + 1 tsp vanilla. 1 To this mixture add 1/2 cup desicated coconut. Mix in 2 Tbsp milk or cream 4. Pour over jam in tart shells 5. Bake at 400°F for 10 min, then bake at 350°F until pastry is brown')"><p>butter tarts</p></div>
+                <div class="option dPink right" onclick="recipeCard('tres-leches-cake.png', 'mom', 'Los Ranchos Tres Leches From Miami Spice by Steven Raichlen (Workman, $12.95). The recipe is from Los Ranchos Restaurant in Miami, which was founded by a nephew of the late Nicaraguan president Anastasio Somoza. 1 cup sugar, divided 5 large eggs, separated 1/3 cup milk 1/2 teaspoon vanilla extract 1 cup all-purpose flour 11⁄2 teaspoons baking powder 1/2 teaspoon cream of tartar Milk Syrup (recipe follows) Meringue (recipe follows) Preheat oven to 350 degrees. Generously butter a 13-by-9-by-2-inch baking dish. Beat 3/4 cup sugar and egg yolks until light and fluffy, about 5 minutes. Fold in milk, vanilla, flour and baking powder. Beat egg whites to stiff peaks, adding cream of tartar after 20 seconds. Gradually add remaining 1/4 cup sugar, and continue beating until whites are glossy and firm but not dry. Gently fold whites into yolk mixture. Pour batter into prepared pan. Bake cake until it feels firm and an inserted toothpick comes out clean, 40 to 50 minutes. Let cake cool completely on a wire rack. Unmold cake onto a deep, large platter. Pierce cake all over with a fork. Pour Milk Syrup over cake. Spoon the overflow back on top until all is absorbed. Using a wet spatula, spread top and sides of cake with a thick layer of Meringue. Refrigerate the cake covered at least 2 hours before serv- ing. Makes 8 to 10 servings.')"><p>tres leches cake</p></div>
+                <div class="option dPink" onclick="recipeCard('milk-syrup-meringue.png', 'mom', 'Milk Syrup 1 12-ounce can evaporated milk 1 cup each: sweetened condensed milk and whipping cream 1 teaspoon vanilla extract 1 tablespoon light rum Combine evaporated milk, sweetened condensed milk, cream, vanilla and rum in a mixing bowl. Whisk until well mixed. Meringue 1 cup sugar, divided 1/4 cup water 3 egg whites 1/2 teaspoon cream of tartar Place 3/4 cup plus 2 tablespoons sugar in heavy saucepan with water. Cover and cook over high heat 2 minutes. Uncover pan and cook the sugar to the soft-ball stage, 239 degrees on a candy thermometer, 6 to 8 minutes. Meanwhile, beat egg whites to soft peaks with cream of tartar in electric mixer. Add remaining 2 tablespoons sugar gradually, continuing beating to stiff peaks. Pour boiling sugar syrup in a thin stream into the whites and continue beating until mixture is cool to the touch. The hot syrup cooks the whites.')"><p>milk syrup + meringue</p></div>
+            </div>
+        </section>
+
+        <div class="recipeSection">
+            <div class="recipeHead">
+                <p class="whoFromText">recipe from: </p>
+                <p class="whoFromText" id="recipeSource"></p>
+            </div>
+            <div id="img-container"><img width="900" id="rollPicture"/></div>
+        </div>
+
+        <footer class="footer">
+            <div><h3 class="footerText">a box full of love</h3></div>
+            <div><h3 class="footerText" id="clock"></h3></div>
+            <div><h3 class="footerText">by e.rc</h3></div>
         </footer>
     </body>
 </html>

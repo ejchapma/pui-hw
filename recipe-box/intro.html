@@ -27,11 +27,12 @@
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
     <link rel="stylesheet" type="text/css" href="./css/intro.css" />
 
-    <!-- font, open-sans -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;800&display=swap"
-        rel="stylesheet">
+    <!-- link to scripts sheet -->
+    <script defer src="./scripts/timer.js"></script>
+    <script defer src="./scripts/clock.js"></script>
+
+    <!-- font, ivypresto -->
+    <link rel="stylesheet" href="https://use.typekit.net/lik7fyz.css">
 </head>
 
 <body>
@@ -40,11 +41,8 @@
         <div class="modeledBox">
             <canvas id="canvas3d" class="modeledBox"></canvas>
             <a href="index.html">
-                <div class="enterButton"><p>open the box</p></div>
+                <div class="enterButton"><p class="darkText">open the box</p></div>
             </a>
-            <!-- <div class="enterButton">
-                <a href="index.html">open the box</a>
-            </div> -->
         </div>
 
         <script type="module">
@@ -55,6 +53,12 @@
         </script>
 
     </main>
+
+    <footer class="footer">
+        <div><h3 class="footerText">a box full of love</h3></div>
+        <div><h3 class="footerText" id="clock"></h3></div>
+        <div><h3 class="footerText">by e.rc</h3></div>
+    </footer>
 </body>
 
 </html>

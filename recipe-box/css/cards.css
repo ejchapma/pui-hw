@@ -1,0 +1,223 @@
+/* general */
+.row {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    gap: 3rem;
+    padding-top: 0.5rem;
+    padding-left: 2.5rem;
+}
+.card {
+    margin-top: -7.5rem;
+    padding-left: 1rem;
+    
+    width: 325px;
+    height: 200px;
+
+    border-radius: 20px;
+}
+.card:first-child {
+    margin-top: 0;
+}
+.stack:hover .card:last-child{
+    transition: transform 0.1s ease-in-out 0s;
+    transform: translate(0, -20px);
+}
+.option:hover {
+    transform: translate(-30px, -10px) rotate(-7.84deg);
+    transition: transform 0.1s ease-in-out 0s;
+}
+.sideHead{
+    display: flex;
+    align-items: flex-end;
+    color: #FDF7E7;
+    gap: 0.4rem;
+}
+.sideTitle.closeButton {
+    width: 15%;
+    height: 50%;
+}
+.sidebar {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    right: 0;
+    top: 0;
+    padding: 2rem;
+    width: 33%;
+    height: 100%;
+    background-color: #FDF7E7;
+    border-left: 3px solid #58575F;
+
+    animation: .3s ease-in-out sidebarAppear;
+}
+.sidebar.visible {
+    display: block;
+}
+@keyframes sidebarAppear {
+    from { transform: translateX(100%); opacity: 0 }
+    to { transform: none; }
+}
+
+.recipeSection {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 67%;
+    height: 100%;
+    padding-left: 7%;
+    padding-top: 10%;
+
+    background: rgba(253, 247, 231, 0.5);
+    backdrop-filter: blur(10px);
+}
+.recipeSection.visible{
+    display: block;
+}
+.recipeHead{
+    display: flex;
+}
+.whoFromText {
+    font-weight: 400;
+    font-size: 28px;
+    padding-bottom: 0.2rem;
+    margin: 0;
+}
+
+
+
+
+/* individuals */
+.card.dGreen {
+    background-color: #6D957B;
+    border: 3px solid #40659D;
+}
+.card.orange {
+    background: #F79969;
+    border: 3px solid #D37399;
+}
+.card.lGreen {
+    background: #90B575;
+    border: 3px solid #6D957B;
+}
+.card.lime {
+    background: #DDE95F;
+    border: 3px solid #90B575;
+}
+.card.blue {
+    background: #40659D;
+    border: 3px solid #D37399;
+}
+.card.lPink {
+    background: #F8A1AC;
+    border: 3px solid #D37399;
+}
+.card.dPink {
+    background: #D37399;
+    border: 3px solid #97708F;
+}
+
+/* sidebars */
+.sideTitle { 
+    width: 100%;
+    height: 90px;
+    border-radius: 20px;
+    padding: 0.5rem;
+    margin-bottom: 8.5rem;
+    text-align: center;
+}
+.sideTitle.dGreen {
+    background-color: #6D957B;
+    border: 3px solid #40659D;
+}
+.sideTitle.orange {
+    background: #F79969;
+    border: 3px solid #D37399;
+}
+.sideTitle.lGreen {
+    background: #90B575;
+    border: 3px solid #6D957B;
+}
+.sideTitle.lime {
+    background: #DDE95F;
+    border: 3px solid #90B575;
+}
+.sideTitle.blue {
+    background: #40659D;
+    border: 3px solid #D37399;
+}
+.sideTitle.lPink {
+    background: #F8A1AC;
+    border: 3px solid #D37399;
+}
+.sideTitle.dPink {
+    background: #D37399;
+    border: 3px solid #97708F;
+}
+
+/* options */
+.option {
+    width: 75%;
+    height: 200px;
+    border-radius: 15px;
+    margin-top: -6.5rem;
+    color:#FDF7E7;
+}
+.option p{
+    padding: 0.5rem;
+    margin:0;
+}
+.option.dGreen {
+    background-color: #6D957B;
+    border: 3px solid #40659D;
+}
+.option.orange {
+    background: #F79969;
+    border: 3px solid #D37399;
+}
+.option.lGreen {
+    background: #90B575;
+    border: 3px solid #6D957B;
+}
+.option.lime {
+    background: #DDE95F;
+    border: 3px solid #90B575;
+}
+.option.blue {
+    background: #40659D;
+    border: 3px solid #D37399;
+}
+.option.lPink {
+    background: #F8A1AC;
+    border: 3px solid #D37399;
+}
+.option.dPink {
+    background: #D37399;
+    border: 3px solid #97708F;
+}
+.option.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+.option.right {
+    margin-left: auto;
+}
+
+@media screen and (max-width: 768px){
+    .row {
+        display: flex;
+        flex-wrap: wrap-reverse;
+        gap: 2rem;
+        padding-top: 0.5rem;
+        padding-left: 2.5rem;
+    }
+    .card {
+        margin-top: -7.5rem;
+        padding-left: 1rem;
+        
+        width: 325px;
+        height: 200px;
+    
+        border-radius: 20px;
+    }
+}
