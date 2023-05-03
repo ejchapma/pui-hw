@@ -133,15 +133,15 @@
     text-align: center;
 }
 .sideTitle.dGreen {
-    background-color: #6D957B;
+    background-color: #435D4C;
     border: 3px solid #40659D;
 }
 .sideTitle.orange {
-    background: #F79969;
+    background: #914118;
     border: 3px solid #D37399;
 }
 .sideTitle.lGreen {
-    background: #7B9668;
+    background: #4A5C3D;
     border: 3px solid #6D957B;
 }
 .sideTitle.lime {
@@ -149,15 +149,15 @@
     border: 3px solid #7B9668;
 }
 .sideTitle.blue {
-    background: #40659D;
+    background: #335890;
     border: 3px solid #D37399;
 }
 .sideTitle.lPink {
-    background: #F8A1AC;
+    background: #FDD7DC;
     border: 3px solid #D37399;
 }
 .sideTitle.dPink {
-    background: #D37399;
+    background: #91375B;
     border: 3px solid #97708F;
 }
 
@@ -174,15 +174,15 @@
     margin:0;
 }
 .option.dGreen {
-    background-color: #6D957B;
+    background-color: #435D4C;
     border: 3px solid #40659D;
 }
 .option.orange {
-    background: #F79969;
+    background: #914118;
     border: 3px solid #D37399;
 }
 .option.lGreen {
-    background: #90B575;
+    background: #4A5C3D;
     border: 3px solid #6D957B;
 }
 .option.lime {
@@ -190,15 +190,15 @@
     border: 3px solid #90B575;
 }
 .option.blue {
-    background: #40659D;
+    background: #335890;
     border: 3px solid #D37399;
 }
 .option.lPink {
-    background: #F8A1AC;
+    background: #FDD7DC;
     border: 3px solid #D37399;
 }
 .option.dPink {
-    background: #D37399;
+    background: #91375B;
     border: 3px solid #97708F;
 }
 .option.center {
