@@ -89,31 +89,37 @@
 
 /* individuals */
 .card.dGreen {
-    background-color: #6D957B;
+    background-color: #435D4C;
     border: 3px solid #40659D;
 }
 .card.orange {
-    background: #F79969;
+    color: white;
+    background: #914118;
     border: 3px solid #D37399;
 }
 .card.lGreen {
-    background: #90B575;
+    color: white;
+    background: #4A5C3D;
     border: 3px solid #6D957B;
 }
 .card.lime {
+    color: black;
     background: #DDE95F;
-    border: 3px solid #90B575;
+    border: 3px solid #7B9668;
 }
 .card.blue {
-    background: #40659D;
+    color: white;
+    background: #335890;
     border: 3px solid #D37399;
 }
 .card.lPink {
-    background: #F8A1AC;
+    color: black;
+    background: #FDD7DC;
     border: 3px solid #D37399;
 }
 .card.dPink {
-    background: #D37399;
+    color: white;
+    background: #91375B;
     border: 3px solid #97708F;
 }
 
@@ -135,12 +141,12 @@
     border: 3px solid #D37399;
 }
 .sideTitle.lGreen {
-    background: #90B575;
+    background: #7B9668;
     border: 3px solid #6D957B;
 }
 .sideTitle.lime {
     background: #DDE95F;
-    border: 3px solid #90B575;
+    border: 3px solid #7B9668;
 }
 .sideTitle.blue {
     background: #40659D;
